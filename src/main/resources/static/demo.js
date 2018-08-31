@@ -57,10 +57,10 @@ function data2(dt) {
             }
         },
         grid: {
-            left: '3%',
-            right: '4%',
+            left: '0',
+            right:'0',
             top: '0',
-            bottom: '3%'
+            bottom: '0'
         },
         xAxis : [
             {
@@ -103,10 +103,10 @@ function data3(dt) {
             }
         },
         grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            top:'0'
+            left: '0',
+            right:'0',
+            top: '0',
+            bottom: '0'
         },
         xAxis : [
             {
@@ -149,10 +149,10 @@ function data4(dt) {
             }
         },
         grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            top:'0'
+            left: '0',
+            right:'0',
+            top: '0',
+            bottom: '0'
         },
         xAxis : [
             {
@@ -189,38 +189,71 @@ function data7(dt) {
     var dom = document.getElementById("xydEcharts2");
     var myChart = echarts.init(dom);
     option = {
-        legend: {
-            orient: 'vertical',
-            x: 'left',
-            data:['直接访问']
+        title: {
+            text: dt.dataJson2.data1.value,
+            subtext: dt.dataJson2.data1.title,
+            x: 'center',
+            y: '27%',
+            textStyle: {
+                fontWeight: 'normal',
+                color: '#bae6dc',
+                fontSize: '13'
+            },
+            subtextStyle: {
+                fontSize: 11,
+                color: '#51fdc3'
+            }
         },
-        color : [ '#8a65e0', '#101f1a'],
-        series: [
-            {
-                name:'访问来源',
-                type:'pie',
-                radius: ['60%', '75%'],
-                avoidLabelOverlap: false,
-                label: {
-                    normal: {
-                        show: true,
-                        position: 'center'
+        color: ['rgba(16, 31, 26, 0.85)'],
+        legend: {
+            show: false,
+            itemGap: 12,
+            data: ['01', '02']
+        },
+
+        series: [{
+            name: 'Line 1',
+            type: 'pie',
+            clockWise: true,
+            radius: ['65%', '78%'],
+            itemStyle: {
+                normal: {
+                    label: {
+                        show: false
                     },
-                    emphasis: {
-                        show: true
-                    }
-                },
-                labelLine: {
-                    normal: {
+                    labelLine: {
                         show: false
                     }
-                },
-                data:[
-                    {value:dt.dataJson2.data1.value, name:dt.dataJson2.data1.value + '\n' + dt.dataJson2.data1.title},
-                    {value:dt.dataJson2.data1.default}
-                ]
-            }
-        ]
+                }
+            },
+            hoverAnimation: true,
+            data: [{
+                value: dt.dataJson2.data1.value,
+                name: '50',
+                itemStyle: {
+                    normal: {
+                        color: { // 完成的圆环的颜色
+                            colorStops: [{
+                                offset: 0,
+                                color: '#ed6be7' // 0% 处的颜色 ed6be7
+                            }, {
+                                offset: 1,
+                                color: '#8454f4' // 100% 处的颜色
+                            }]
+                        },
+                        label: {
+                            show: false
+                        },
+                        labelLine: {
+                            show: false
+                        }
+                    }
+                }
+            }, {
+                name: '02',
+                value: dt.dataJson2.data1.default
+            }]
+        }]
     };
     myChart.setOption(option, true);
 }
@@ -229,38 +262,71 @@ function data8(dt) {
     var dom = document.getElementById("xyzEcharts2");
     var myChart = echarts.init(dom);
     option = {
-        legend: {
-            orient: 'vertical',
-            x: 'left',
-            data:['直接访问']
+        title: {
+            text: dt.dataJson2.data2.value,
+            subtext: dt.dataJson2.data2.title,
+            x: 'center',
+            y: '27%',
+            textStyle: {
+                fontWeight: 'normal',
+                color: '#bae6dc',
+                fontSize: '13'
+            },
+            subtextStyle: {
+                fontSize: 11,
+                color: '#51fdc3'
+            }
         },
-        color : [ '#64e0da', '#101f1a'],
-        series: [
-            {
-                name:'访问来源',
-                type:'pie',
-                radius: ['60%', '75%'],
-                avoidLabelOverlap: false,
-                label: {
-                    normal: {
-                        show: true,
-                        position: 'center'
+        color: ['rgba(16, 31, 26, 0.85)'],
+        legend: {
+            show: false,
+            itemGap: 12,
+            data: ['01', '02']
+        },
+
+        series: [{
+            name: 'Line 1',
+            type: 'pie',
+            clockWise: true,
+            radius: ['63%', '75%'],
+            itemStyle: {
+                normal: {
+                    label: {
+                        show: false
                     },
-                    emphasis: {
-                        show: true
-                    }
-                },
-                labelLine: {
-                    normal: {
+                    labelLine: {
                         show: false
                     }
-                },
-                data:[
-                    {value:dt.dataJson2.data2.value, name:dt.dataJson2.data2.value + '\n' + dt.dataJson2.data2.title},
-                    {value:dt.dataJson2.data2.default}
-                ]
-            }
-        ]
+                }
+            },
+            hoverAnimation: true,
+            data: [{
+                value: dt.dataJson2.data2.value,
+                name: '50',
+                itemStyle: {
+                    normal: {
+                        color: { // 完成的圆环的颜色
+                            colorStops: [{
+                                offset: 0,
+                                color: '#57edcb' // 0% 处的颜色 6efafb
+                            }, {
+                                offset: 1,
+                                color: '#6ab9f0' // 100% 处的颜色
+                            }]
+                        },
+                        label: {
+                            show: false
+                        },
+                        labelLine: {
+                            show: false
+                        }
+                    }
+                }
+            }, {
+                name: '02',
+                value: dt.dataJson2.data2.default
+            }]
+        }]
     };
     myChart.setOption(option, true);
 }
@@ -269,38 +335,71 @@ function data9(dt) {
     var dom = document.getElementById("xyyEcharts2");
     var myChart = echarts.init(dom);
     option = {
-        legend: {
-            orient: 'vertical',
-            x: 'left',
-            data:['直接访问']
+        title: {
+            text: dt.dataJson2.data3.value,
+            subtext: dt.dataJson2.data3.title,
+            x: 'center',
+            y: '27%',
+            textStyle: {
+                fontWeight: 'normal',
+                color: '#bae6dc',
+                fontSize: '13'
+            },
+            subtextStyle: {
+                fontSize: 11,
+                color: '#51fdc3'
+            }
         },
-        color : [ '#46e094', '#101f1a'],
-        series: [
-            {
-                name:'访问来源',
-                type:'pie',
-                radius: ['60%', '75%'],
-                avoidLabelOverlap: false,
-                label: {
-                    normal: {
-                        show: true,
-                        position: 'center'
+        color: ['rgba(16, 31, 26, 0.85)'],
+        legend: {
+            show: false,
+            itemGap: 12,
+            data: ['01', '02']
+        },
+
+        series: [{
+            name: 'Line 1',
+            type: 'pie',
+            clockWise: true,
+            radius: ['63%', '75%'],
+            itemStyle: {
+                normal: {
+                    label: {
+                        show: false
                     },
-                    emphasis: {
-                        show: true
-                    }
-                },
-                labelLine: {
-                    normal: {
+                    labelLine: {
                         show: false
                     }
-                },
-                data:[
-                    {value:dt.dataJson2.data3.value, name:dt.dataJson2.data3.value + '\n' + dt.dataJson2.data3.title},
-                    {value:dt.dataJson2.data3.default}
-                ]
-            }
-        ]
+                }
+            },
+            hoverAnimation: true,
+            data: [{
+                value: dt.dataJson2.data3.value,
+                name: '50',
+                itemStyle: {
+                    normal: {
+                        color: { // 完成的圆环的颜色
+                            colorStops: [{
+                                offset: 0,
+                                color: '#fbf452' // 0% 处的颜色 6efafb
+                            }, {
+                                offset: 1,
+                                color: '#7ffc72' // 100% 处的颜色
+                            }]
+                        },
+                        label: {
+                            show: false
+                        },
+                        labelLine: {
+                            show: false
+                        }
+                    }
+                }
+            }, {
+                name: '02',
+                value: dt.dataJson2.data3.default
+            }]
+        }]
     };
     myChart.setOption(option, true);
 }
@@ -309,38 +408,71 @@ function data10(dt) {
     var dom = document.getElementById("xyyouEcharts2");
     var myChart = echarts.init(dom);
     option = {
-        legend: {
-            orient: 'vertical',
-            x: 'left',
-            data:['直接访问']
+        title: {
+            text: dt.dataJson2.data4.value,
+            subtext: dt.dataJson2.data4.title,
+            x: 'center',
+            y: '27%',
+            textStyle: {
+                fontWeight: 'normal',
+                color: '#bae6dc',
+                fontSize: '13'
+            },
+            subtextStyle: {
+                fontSize: 11,
+                color: '#51fdc3'
+            }
         },
-        color : [ '#e04941', '#101f1a'],
-        series: [
-            {
-                name:'访问来源',
-                type:'pie',
-                radius: ['60%', '75%'],
-                avoidLabelOverlap: false,
-                label: {
-                    normal: {
-                        show: true,
-                        position: 'center'
+        color: ['rgba(16, 31, 26, 0.85)'],
+        legend: {
+            show: false,
+            itemGap: 12,
+            data: ['01', '02']
+        },
+
+        series: [{
+            name: 'Line 1',
+            type: 'pie',
+            clockWise: true,
+            radius: ['63%', '75%'],
+            itemStyle: {
+                normal: {
+                    label: {
+                        show: false
                     },
-                    emphasis: {
-                        show: true
-                    }
-                },
-                labelLine: {
-                    normal: {
+                    labelLine: {
                         show: false
                     }
-                },
-                data:[
-                    {value:dt.dataJson2.data4.value, name:dt.dataJson2.data4.value + '\n' + dt.dataJson2.data4.title},
-                    {value:dt.dataJson2.data4.default}
-                ]
-            }
-        ]
+                }
+            },
+            hoverAnimation: true,
+            data: [{
+                value: dt.dataJson2.data4.value,
+                name: '50',
+                itemStyle: {
+                    normal: {
+                        color: { // 完成的圆环的颜色
+                            colorStops: [{
+                                offset: 0,
+                                color: '#ed5779' // 0% 处的颜色 6efafb
+                            }, {
+                                offset: 1,
+                                color: '#ef9e6a' // 100% 处的颜色
+                            }]
+                        },
+                        label: {
+                            show: false
+                        },
+                        labelLine: {
+                            show: false
+                        }
+                    }
+                }
+            }, {
+                name: '02',
+                value: dt.dataJson2.data4.default
+            }]
+        }]
     };
     myChart.setOption(option, true);
 }
