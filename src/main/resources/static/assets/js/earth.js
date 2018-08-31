@@ -22,12 +22,12 @@ function init() {
     camera.up.set(0, 1, 0);
     camera.lookAt({
         x: 0,
-        y: 150,
+        y: 145,
         z: 0
     });
 
     var texture1 = new THREE.TextureLoader().load('assets/images/diffuse.jpg');
-    var geometry = new THREE.SphereGeometry( 100, 200, 200 );
+    var geometry = new THREE.SphereGeometry( 95, 200, 200 );
     var material = new THREE.MeshBasicMaterial({
         map: texture1
     });
@@ -67,3 +67,4 @@ function animate2() {
     });
 }
 animate2();
+

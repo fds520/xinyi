@@ -194,7 +194,7 @@ function data7(dt) {
             x: 'left',
             data:['直接访问']
         },
-        color : [ '#8a65e0', '#0d4647'],
+        color : [ '#8a65e0', '#101f1a'],
         series: [
             {
                 name:'访问来源',
@@ -234,7 +234,7 @@ function data8(dt) {
             x: 'left',
             data:['直接访问']
         },
-        color : [ '#64e0da', '#0d4647'],
+        color : [ '#64e0da', '#101f1a'],
         series: [
             {
                 name:'访问来源',
@@ -274,7 +274,7 @@ function data9(dt) {
             x: 'left',
             data:['直接访问']
         },
-        color : [ '#46e094', '#0d4647'],
+        color : [ '#46e094', '#101f1a'],
         series: [
             {
                 name:'访问来源',
@@ -314,7 +314,7 @@ function data10(dt) {
             x: 'left',
             data:['直接访问']
         },
-        color : [ '#e04941', '#0d4647', '#2aff57', '#ff49e2'],
+        color : [ '#e04941', '#101f1a'],
         series: [
             {
                 name:'访问来源',
@@ -368,6 +368,7 @@ function data13(dt) {
             x : '10%', // x:坐标轴左边与边框的距离
             x2 : '5%', // x2:坐标轴右边与边框的距离
             y2 : '10%', // y2:坐标轴底端与边框的距离
+            left: '0',
             containLabel: true
         },
         xAxis : {
@@ -388,6 +389,7 @@ function data13(dt) {
         series : [ {
             name : dt.dataJson3.dataName[0],
             type : 'line',
+            smooth : true,
             itemStyle : {
                 normal : {
                     color : "#0E8863"
@@ -414,6 +416,7 @@ function data13(dt) {
         }, {
             name : dt.dataJson3.dataName[1],
             type : 'line',
+            smooth : true,
             itemStyle : {
                 normal : {
                     color : "#D13C62"
