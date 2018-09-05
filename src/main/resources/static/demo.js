@@ -489,7 +489,8 @@ function data13(dt) {
             textStyle:{
                 color:'#fff3f3'
             },
-            icon:'rect'
+            icon:'rect',
+            right:'0'
         },
         tooltip : {
             trigger : 'axis',
@@ -572,58 +573,6 @@ function data13(dt) {
                 }
             },
             data : dt.dataJson3.data2
-        }, {
-            name : dt.dataJson3.dataName[2],
-            type : 'line',
-            itemStyle : {
-                normal : {
-                    color : "#7251d1"
-                }
-            },
-            areaStyle : {
-                normal : {
-                    color : {
-                        x : 0,
-                        y : 0,
-                        x2 : 0,
-                        y2 : 1,
-                        colorStops : [ {
-                            offset : 1,
-                            color : '#16111D'
-                        }, {
-                            offset : 0,
-                            color : '#7251d1'
-                        } ],
-                    }
-                }
-            },
-            data : dt.dataJson3.data3
-        }, {
-            name : dt.dataJson3.dataName[3],
-            type : 'line',
-            itemStyle : {
-                normal : {
-                    color : "#d1bc3f"
-                }
-            },
-            areaStyle : {
-                normal : {
-                    color : {
-                        x : 0,
-                        y : 0,
-                        x2 : 0,
-                        y2 : 1,
-                        colorStops : [ {
-                            offset : 1,
-                            color : '#16111D'
-                        }, {
-                            offset : 0,
-                            color : '#d1bc3f'
-                        } ],
-                    }
-                }
-            },
-            data : dt.dataJson3.data4
         }]
     };
 
