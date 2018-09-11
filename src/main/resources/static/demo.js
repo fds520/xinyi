@@ -490,7 +490,9 @@ function data13(dt) {
                 color:'#fff3f3'
             },
             icon:'rect',
-            right:'0'
+            right:'0',
+            itemWidth:17,
+            itemHeight: 10
         },
         tooltip : {
             trigger : 'axis',
@@ -506,7 +508,7 @@ function data13(dt) {
         },
         xAxis : {
             type : 'category',
-            data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+            data : ['8月','9月','10月','11月','12月','1月','2月','3月','4月','5月','6月','7月','8月'],
             axisLabel : {
                 interval : 0
             }
@@ -525,7 +527,7 @@ function data13(dt) {
             smooth : true,
             itemStyle : {
                 normal : {
-                    color : "#0E8863"
+                    color : "#d13c62"/*#5b9bd5*/
                 }
             },
             areaStyle : {
@@ -540,7 +542,7 @@ function data13(dt) {
                             color : '#16111D'
                         }, {
                             offset : 0,
-                            color : '#0E8863'
+                            color : '#d13c62'
                         } ],
                     }
                 }
@@ -552,7 +554,7 @@ function data13(dt) {
             smooth : true,
             itemStyle : {
                 normal : {
-                    color : "#D13C62"
+                    color : "#a669af"
                 }
             },
             areaStyle : {
@@ -567,13 +569,97 @@ function data13(dt) {
                             color : '#16111D'
                         }, {
                             offset : 0,
-                            color : '#D13C62'
+                            color : '#a669af'
                         } ],
                     }
                 }
             },
             data : dt.dataJson3.data2
-        }]
+        },
+            {
+                name : dt.dataJson3.dataName[2],
+                type : 'line',
+                smooth : true,
+                itemStyle : {
+                    normal : {
+                        color : "#0e8863"
+                    }
+                },
+                areaStyle : {
+                    normal : {
+                        color : {
+                            x : 0,
+                            y : 0,
+                            x2 : 0,
+                            y2 : 1,
+                            colorStops : [ {
+                                offset : 1,
+                                color : '#16111D'
+                            }, {
+                                offset : 0,
+                                color : '#0e8863'
+                            } ],
+                        }
+                    }
+                },
+                data : dt.dataJson3.data3
+            },
+            {
+                name : dt.dataJson3.dataName[3],
+                type : 'line',
+                smooth : true,
+                itemStyle : {
+                    normal : {
+                        color : "#98982b"
+                    }
+                },
+                areaStyle : {
+                    normal : {
+                        color : {
+                            x : 0,
+                            y : 0,
+                            x2 : 0,
+                            y2 : 1,
+                            colorStops : [ {
+                                offset : 1,
+                                color : '#16111D'
+                            }, {
+                                offset : 0,
+                                color : '#98982b'
+                            } ],
+                        }
+                    }
+                },
+                data : dt.dataJson3.data4
+            },
+            {
+                name : dt.dataJson3.dataName[4],
+                type : 'line',
+                smooth : true,
+                itemStyle : {
+                    normal : {
+                        color : "#4472c4"
+                    }
+                },
+                areaStyle : {
+                    normal : {
+                        color : {
+                            x : 0,
+                            y : 0,
+                            x2 : 0,
+                            y2 : 1,
+                            colorStops : [ {
+                                offset : 1,
+                                color : '#16111D'
+                            }, {
+                                offset : 0,
+                                color : '#4472c4'
+                            } ],
+                        }
+                    }
+                },
+                data : dt.dataJson3.data5
+            }]
     };
 
     myChart.setOption(option, true);
