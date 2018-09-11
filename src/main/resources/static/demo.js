@@ -677,7 +677,7 @@ $.ajax({
         result.dataJson1.creditService.forEach(function (name) {
             htmlList += "<li>\n" +
                 "                            <i class=\"iconfont icon-fangdichanjianzhu\"></i>" + name.key + "<span class=\"other\"><span\n" +
-                "                                class=\"num\">" + name.value + "</span><span class=\"unit\">件</span></span>\n" +
+                "                                class=\"num\">" + name.value + "</span><span class=\"unit\">次</span></span>\n" +
                 "                        </li>";
         })
         $("#credit").html(htmlList);
