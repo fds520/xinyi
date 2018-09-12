@@ -1480,20 +1480,20 @@ s
         $(this).siblings().removeClass('choose');
     });
 
-    // setInterval(function (){
-    // var id = Math.ceil(Math.random()*10);
-    // $('.mapPop' + id + ' .popTxt').css('visibility', 'visible');
-    // $('.mapPop' + id).siblings().find('.popTxt').css('visibility', 'hidden');
-    // }, 3000);
+    setInterval(function (){
+    var id = Math.ceil(Math.random()*10);
+    $('.mapPop' + id + ' .popTxt').css('visibility', 'visible');
+    $('.mapPop' + id).siblings().find('.popTxt').css('visibility', 'hidden');
+    }, 3000);
 
-    $('.mapPop img').hover(function(){
+    /*$('.mapPop img').hover(function(){
         $(this).parent().find('.popTxt').css('visibility', 'visible');
         $(this).parents('.mapPop').siblings().find('.popTxt').css('visibility', 'hidden');
     });
 
     $('.mapPop img').mouseout(function(){
         $(this).parent().find('.popTxt').css('visibility', 'hidden');
-    });
+    });*/
 
 
     $(function() {
